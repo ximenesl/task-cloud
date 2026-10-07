@@ -2,8 +2,6 @@
 
 Painel interativo e executivo desenvolvido com **Streamlit**, **Pandas** e **Plotly** para análise de dados de vendas da rede de lanchonetes fictícia **Sabor do Sertão**, presente nas cidades de **Recife, Olinda, Caruaru, Petrolina e Garanhuns**.
 
-O projeto atende a todos os requisitos da atividade prática, cobrindo desde o **Passo 0 até o Desafio Bônus (+1 pt)**, totalizando a pontuação máxima (11/10 pontos).
-
 ---
 
 ## 📌 Sumário
@@ -76,7 +74,7 @@ Gráficos construídos com `plotly.express` e organizados em `st.tabs`:
   3. *Hegemonia do Pix e planejamento de escalas* (Redução de taxas de adquirentes e picos nas refeições).
 - **Exportação de Dados:** Botão `st.download_button` que exporta a base com os filtros atualmente aplicados em CSV (codificação `utf-8-sig` e separador `;` compatível com Excel e Power BI).
 
-### 🌟 Desafio Bônus: Explorador Livre de Dados (+1 pt)
+### 🌟 Desafio Bônus: Explorador Livre de Dados
 Aba dedicada que permite:
 - Fazer upload de **qualquer arquivo CSV** externo ou utilizar a base atual filtrada.
 - Selecionar dinamicamente via `st.selectbox`:
