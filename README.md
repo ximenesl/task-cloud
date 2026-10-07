@@ -38,28 +38,28 @@ Análise executiva de desempenho comercial, distribuição geográfica e hábito
 - Script [`gerar_dados.py`](file:///gerar_dados.py) com semente aleatória fixa (`seed=42`) para reprodutibilidade estrita.
 - Gera 5.000 transações comerciais ao longo de 365 dias com as 5 cidades, 12 itens do cardápio divididos em 4 categorias, formas de pagamento e 60 valores ausentes propositais na coluna `avaliacao`.
 
-### ✅ Nível 1: Exploração e Tratamento de Dados (2 pts)
+### ✅ Nível 1: Exploração e Tratamento de Dados
 - **Primeiras Linhas:** Visualização tabular inicial com `st.dataframe`.
 - **Resumo Estatístico:** Matriz de estatísticas descritivas (`df.describe()`) para todas as variáveis numéricas (preço, quantidade, total e avaliação).
 - **Diagnóstico de Nulos:** Tabela com contagem e percentual de valores ausentes por coluna.
 - **Tratamento da Coluna `avaliacao`:** Preenchimento dos 60 valores ausentes utilizando a **mediana (3.0)**, acompanhado de justificativa detalhada em `st.caption`:
   > *A variável de avaliação é de natureza discreta/ordinal (notas de 1 a 5). A mediana foi adotada por ser uma medida de tendência central robusta a assimetrias e outliers, preservando valores inteiros da escala sem introduzir médias fracionárias artificiais e evitando o descarte de 60 transações financeiras válidas.*
 
-### ✅ Nível 2: Indicadores Executivos (2 pts)
+### ✅ Nível 2: Indicadores Executivos
 Quatro KPIs em destaque no topo da tela utilizando `st.columns` e `st.metric`:
 1. **💰 Faturamento Total:** `R$ 192.237,50` (formatado no padrão monetário brasileiro).
 2. **🧾 Número de Vendas:** `5.000` pedidos registrados.
 3. **🎯 Ticket Médio:** `R$ 38,45` por pedido.
 4. **⭐ Avaliação Média:** `3,05 / 5.0` estrelas.
 
-### ✅ Nível 3: Filtros Globais Dinâmicos (2 pts)
+### ✅ Nível 3: Filtros Globais Dinâmicos
 Barra lateral (`st.sidebar`) com controles interativos que atualizam todos os KPIs, gráficos e tabelas:
 - **Cidades:** `st.multiselect` pré-selecionado com as 5 cidades.
 - **Categorias:** `st.multiselect` com as 4 categorias do cardápio (*Bebidas, Salgados, Doces, Pratos*).
 - **Intervalo de Datas:** `st.date_input` permitindo filtrar qualquer período do ano com tratamento seguro de intervalos parciais.
 - Contador em tempo real com volume e percentual da base filtrada.
 
-### ✅ Nível 4: Visualizações Interativas em Abas (3 pts + Opcional)
+### ✅ Nível 4: Visualizações Interativas em Abas
 Gráficos construídos com `plotly.express` e organizados em `st.tabs`:
 1. **Faturamento Mensal (Linha):** Agrupamento mensal conforme dica oficial `df.groupby(df["data"].dt.to_period("M"))["total"].sum()` com formatação limpa e marcadores.
 2. **Faturamento por Cidade (Barras):** Destaque da receita por praça, evidenciando a liderança de Recife (R$ 66,6k), seguida de Caruaru e Petrolina.
@@ -67,7 +67,7 @@ Gráficos construídos com `plotly.express` e organizados em `st.tabs`:
 4. **Formas de Pagamento (Donut / Pizza):** Distribuição percentual do faturamento, comprovando o domínio do Pix (~45%).
 5. **[Opcional Extra] Mapa de Calor (Dia da Semana x Hora):** `px.density_heatmap` mostrando a concentração de fluxo e vendas ao longo dos dias e horários (7h às 21h).
 
-### ✅ Nível 5: Conclusões Gerenciais e Exportação (1 pt)
+### ✅ Nível 5: Conclusões Gerenciais e Exportação
 - **3 Conclusões Estratégicas em `st.markdown`:**
   1. *Concentração geográfica e oportunidades regionais* (Recife lidera com 34%, Caruaru e Petrolina fortes no interior).
   2. *Equilíbrio do cardápio entre margem bruta e giro* (Pratos regionais trazem faturamento, bebidas e salgados trazem fluxo).
