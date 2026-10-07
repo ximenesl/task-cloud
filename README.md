@@ -147,26 +147,3 @@ O navegador abrirá automaticamente em `http://localhost:8501`.
 > **Dica:** Caso não suba um arquivo CSV na barra lateral, o painel carrega automaticamente o arquivo gerado localmente `vendas_sabor_do_sertao.csv`. Você também pode arrastar e soltar qualquer arquivo CSV para teste.
 
 ---
-
-## ☁️ Publicação no Streamlit Community Cloud
-
-Para publicar seu painel gratuitamente:
-1. Suba este repositório para o seu GitHub.
-2. Acesse [share.streamlit.io](https://share.streamlit.io/) e faça login com sua conta GitHub.
-3. Clique em **"New app"**.
-4. Selecione o repositório `ximenesl/task-cloud`, a branch `main` (ou `master`) e aponte o arquivo principal para `app.py`.
-5. Clique em **"Deploy"**. Em instantes o painel estará disponível na web com link público compartilhável!
-
----
-
-## 📊 Critérios de Avaliação Atendidos
-
-| Critério | Pontuação Máxima | Status |
-| :--- | :---: | :---: |
-| **Exploração e tratamento de dados** | 2 pts | ✅ Concluído (Nível 1) |
-| **KPIs corretos** | 2 pts | ✅ Concluído (Nível 2) |
-| **Filtros funcionando em todo o painel** | 2 pts | ✅ Concluído (Nível 3) |
-| **Gráficos adequados, títulos e rótulos legíveis** | 3 pts | ✅ Concluído (Nível 4 + Mapa de Calor) |
-| **Insights e exportação** | 1 pt | ✅ Concluído (Nível 5) |
-| **Bônus: explorador livre** | +1 pt | ✅ Concluído (Desafio Bônus) |
-| **TOTAL** | **11 / 10** | **100% + Bônus Máximo** |
